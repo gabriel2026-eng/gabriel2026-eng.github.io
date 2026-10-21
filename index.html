@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gabriel · Automations and websites for small businesses</title>
+<meta name="description" content="I build small automations, websites and AI email assistants for small businesses, inside your own Google Workspace or Microsoft 365 account. Three working demos, fixed prices, delivery in days.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#f7f6f2">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Gabriel · Automations and websites for small businesses">
+<meta property="og:description" content="Order automation in Google Sheets, a one-page business website and an AI email assistant: three working demos you can open right now.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f6f78'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='34' font-weight='bold' text-anchor='middle' fill='%23fff'%3EG%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Gabriel","jobTitle":"Automation and website developer for small businesses","knowsAbout":["Google Apps Script","Google Sheets automation","HTML","CSS","JavaScript","Python","Claude API","Email automation"],"address":{"@type":"PostalAddress","addressCountry":"RO"}}
+</script>
+<style>
+:root{
+  --bg:#f7f6f2; --bg-2:#ffffff; --bg-3:#efede7; --ink:#1d1c1a; --ink-2:#5a5751; --line:#dedbd3;
+  --accent:#1f6f78; --accent-ink:#ffffff; --accent-soft:#e3f0f1;
+  --ok:#2c7a4b; --ok-bg:#e4f3e9; --warn:#9a6700; --warn-bg:#fff2cc; --bad:#b42318; --bad-bg:#fde8e6; --info:#2b5ea7; --info-bg:#e6eefb; --muted-bg:#ecebe7;
+  --shadow:0 10px 30px rgba(20,18,14,.10); --radius:16px;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#15171a; --bg-2:#1d2024; --bg-3:#24282d; --ink:#eceae4; --ink-2:#a9a59c; --line:#33373d;
+    --accent:#5fb4bd; --accent-ink:#0f1a1c; --accent-soft:#1d3336;
+    --ok:#8ad4a5; --ok-bg:#1d3327; --warn:#f0c674; --warn-bg:#3a3014; --bad:#f09a90; --bad-bg:#3d1f1b; --info:#9ec0f2; --info-bg:#1e2c45; --muted-bg:#2a2e34;
+    --shadow:0 10px 30px rgba(0,0,0,.45);
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+img{max-width:100%;height:auto;display:block}
+h1,h2,h3{line-height:1.15;margin:0 0 .5em;letter-spacing:-.01em}
+h1{font-size:clamp(2rem,5vw,3.2rem)}
+h2{font-size:clamp(1.5rem,3vw,2.1rem)}
+h3{font-size:1.2rem}
+p{margin:0 0 1em}
+.wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+.muted{color:var(--ink-2)}
+.small{font-size:.92rem}
+/* header */
+.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px}
+.brand{font-weight:700;text-decoration:none;color:var(--ink);display:flex;align-items:center;gap:10px}
+.brand i{width:30px;height:30px;border-radius:9px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font:700 17px Georgia,serif;font-style:normal}
+nav a{color:var(--ink-2);text-decoration:none;margin-left:18px;font-size:.95rem}
+nav a:hover{color:var(--ink)}
+@media (max-width:640px){nav a{margin-left:12px;font-size:.88rem}}
+/* buttons */
+.btn{display:inline-block;padding:11px 18px;border-radius:999px;text-decoration:none;font-weight:600;border:1px solid var(--accent);color:var(--accent);background:transparent;line-height:1.2}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn:hover{filter:brightness(1.08)}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 14px}
+/* hero */
+.hero{padding:64px 0 36px}
+.hero .lead{font-size:1.15rem;max-width:720px}
+.note{display:flex;gap:10px;align-items:flex-start;background:var(--accent-soft);border:1px solid var(--line);border-radius:12px;padding:12px 14px;max-width:760px;font-size:.95rem}
+.note b{color:var(--accent)}
+/* sections */
+section{padding:48px 0}
+.kicker{text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;font-weight:700;color:var(--accent);margin-bottom:8px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media (max-width:820px){.grid3{grid-template-columns:1fr}}
+.card{background:var(--bg-2);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.card h3{margin-top:4px}
+.card .ic{width:40px;height:40px;border-radius:12px;background:var(--accent-soft);display:grid;place-items:center;color:var(--accent);margin-bottom:10px}
+/* projects */
+.project{background:var(--bg-2);border:1px solid var(--line);border-radius:22px;padding:26px;margin-top:22px;box-shadow:var(--shadow)}
+.project header{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:baseline;justify-content:space-between}
+.tag{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:var(--muted-bg);color:var(--ink-2)}
+.cols{display:grid;grid-template-columns:1.15fr .85fr;gap:26px;align-items:start;margin-top:14px}
+@media (max-width:860px){.cols{grid-template-columns:1fr}}
+.project ul{padding-left:20px;margin:0 0 14px}
+.project li{margin:4px 0}
+.meta{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;font-size:.93rem;margin:12px 0 0;padding:14px;border-radius:12px;background:var(--bg-3)}
+.meta dt{font-weight:700;color:var(--ink-2)}
+.meta dd{margin:0}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+/* screenshots */
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.shots figure{margin:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--bg-3)}
+.shots figure.wide{grid-column:1/-1}
+.shots img{width:100%;aspect-ratio:16/9.6;object-fit:cover;object-position:top}
+.shots .phone img{aspect-ratio:1/1.75;object-fit:cover;object-position:top}
+.shots figcaption{font-size:.82rem;color:var(--ink-2);padding:8px 12px;border-top:1px solid var(--line)}
+/* sheet mock */
+.sheet{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--bg-2);font-size:.86rem}
+.sheet .bar{display:flex;align-items:center;gap:8px;padding:9px 12px;background:var(--bg-3);border-bottom:1px solid var(--line);font-weight:600}
+.sheet .bar span{opacity:.7;font-weight:500}
+.sheet .scroll{overflow-x:auto}
+.sheet table{border-collapse:collapse;min-width:640px;width:100%}
+.sheet th,.sheet td{padding:7px 10px;border-bottom:1px solid var(--line);border-right:1px solid var(--line);white-space:nowrap;text-align:left}
+.sheet th{background:var(--bg-3);font-weight:600;color:var(--ink-2)}
+.sheet tr:last-child td{border-bottom:0}
+.chip{display:inline-block;padding:2px 9px;border-radius:999px;font-weight:600;font-size:.8rem}
+.c-ok{background:var(--ok-bg);color:var(--ok)}.c-info{background:var(--info-bg);color:var(--info)}.c-warn{background:var(--warn-bg);color:var(--warn)}.c-bad{background:var(--bad-bg);color:var(--bad)}.c-muted{background:var(--muted-bg);color:var(--ink-2)}
+.tick{color:var(--ok);font-weight:700}.cross{color:var(--bad);font-weight:700}
+/* email cards */
+.mail{border:1px solid var(--line);border-radius:14px;background:var(--bg-2);margin-bottom:14px;overflow:hidden}
+.mail .head{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;padding:10px 14px;background:var(--bg-3);border-bottom:1px solid var(--line);font-size:.88rem}
+.mail .head b{font-size:.95rem}
+.mail .body{padding:12px 14px;font-size:.92rem}
+.mail .q{border-left:3px solid var(--line);padding-left:12px;color:var(--ink-2);margin:0 0 10px;font-style:italic}
+.mail pre{white-space:pre-wrap;font:inherit;margin:0 0 10px;padding:10px 12px;border-radius:10px;background:var(--bg-3)}
+.mail .check{font-size:.85rem;color:var(--warn);background:var(--warn-bg);border-radius:10px;padding:8px 12px}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:s}
+@media (max-width:820px){.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.steps{grid-template-columns:1fr}}
+.step{background:var(--bg-2);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+.step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-weight:700;margin-bottom:10px}
+/* prices */
+.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media (max-width:820px){.prices{grid-template-columns:1fr}}
+.price{background:var(--bg-2);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.price .amt{font-size:1.6rem;font-weight:700;margin:6px 0 2px}
+.price ul{padding-left:18px;margin:10px 0 0;color:var(--ink-2);font-size:.95rem}
+/* contact */
+.contact{background:var(--bg-2);border:1px solid var(--line);border-radius:22px;padding:30px;display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center;box-shadow:var(--shadow)}
+@media (max-width:820px){.contact{grid-template-columns:1fr}}
+/* lead form */
+.lead{display:grid;gap:12px}
+.lead label{display:grid;gap:6px;font-weight:600;font-size:.92rem}
+.lead .opt{font-weight:400;color:var(--ink-2)}
+.lead .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:560px){.lead .two{grid-template-columns:1fr}}
+.lead input,.lead select,.lead textarea{font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);width:100%}
+.lead input:focus,.lead select:focus,.lead textarea:focus{outline:2px solid var(--accent);outline-offset:1px}
+.lead .check{grid-template-columns:auto 1fr;align-items:start;font-weight:400;color:var(--ink-2)}
+.lead .check input{width:auto;margin-top:4px}
+.lead .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.lead button{justify-self:start}
+.form-msg{margin:0;font-size:.92rem;min-height:1.4em}
+footer{padding:30px 0 50px;color:var(--ink-2);font-size:.9rem;border-top:1px solid var(--line);margin-top:20px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><i>G</i> Gabriel</a>
+    <nav aria-label="Sections"><a href="#work">Work</a><a href="#how">How I work</a><a href="#prices">Prices</a><a href="#contact">Contact</a></nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <p class="kicker">Automations · Websites · AI assistants</p>
+      <h1>Small automations and websites for small businesses.</h1>
+      <p class="lead">I take the repetitive work out of a small business: orders that file themselves, customer emails that arrive already drafted, a website that brings in enquiries. Everything runs inside your own Google Workspace or Microsoft 365 account, and it is delivered in days, not months.</p>
+      <div class="btns">
+        <a class="btn primary" href="#work">See the three demos</a>
+        <a class="btn" href="https://www.upwork.com/freelancers/~01161968f253c5a07a" rel="noopener">Hire me on Upwork</a>
+        <a class="btn" href="https://www.fiverr.com/gabriel_j2026" rel="noopener">My Fiverr gigs</a>
+      </div>
+      <p class="note"><b>Honest note:</b>&nbsp;I am new on Upwork and Fiverr, so instead of claiming experience I show my work. The three projects below are working demos I built on fictional businesses and made-up data; no client data is shown.</p>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <p class="kicker">What I do</p>
+      <h2>Three things, done properly</h2>
+      <div class="grid3">
+        <article class="card">
+          <div class="ic" aria-hidden="true">⚙</div>
+          <h3>Automations</h3>
+          <p>Form submissions into clean spreadsheet rows, confirmation emails and reminders, daily summaries, data from invoices into tables. Built with Google Apps Script or Python; Zapier or Make when you already use them.</p>
+        </article>
+        <article class="card">
+          <div class="ic" aria-hidden="true">▣</div>
+          <h3>Websites</h3>
+          <p>One-page or small multi-page sites: fast, mobile-first, with a contact form, a WhatsApp button and the basics Google needs. Hand-written HTML, CSS and JavaScript, no bloated themes, easy to host for free.</p>
+        </article>
+        <article class="card">
+          <div class="ic" aria-hidden="true">✉</div>
+          <h3>AI email assistants</h3>
+          <p>An assistant that reads your customer emails, sorts them by priority and drafts a reply in the customer's language. A person reads and sends every message; nothing goes out on its own.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <p class="kicker">Work</p>
+      <h2>Three demos you can open right now</h2>
+      <p class="muted">Each one is a complete, working project. Open it, click around, read the code.</p>
+
+      <!-- 1. Website -->
+      <article class="project">
+        <header>
+          <h3>One-page website for a woodworking shop</h3>
+          <span class="tag">Demo · website</span>
+        </header>
+        <div class="cols">
+          <div class="shots">
+            <figure class="wide"><img src="assets/site-desktop.jpg" alt="Desktop view of the demo website: hero section with headline, two buttons and an illustration" loading="lazy"><figcaption>Desktop, light theme</figcaption></figure>
+            <figure><img src="assets/site-dark.jpg" alt="The same website in dark mode" loading="lazy"><figcaption>Dark mode</figcaption></figure>
+            <figure class="phone"><img src="assets/site-phone.jpg" alt="The website on a phone screen" loading="lazy"><figcaption>On a phone</figcaption></figure>
+          </div>
+          <div>
+            <p>A complete presentation site for a fictional custom-furniture workshop: everything a small business needs on one page, ready to swap for your own texts, colours and photos.</p>
+            <ul>
+              <li>Hero, services, gallery with filters and lightbox, pricing packages, FAQ, testimonials</li>
+              <li>Contact form with validation and a spam trap; WhatsApp chat button</li>
+              <li>Dark mode that follows the visitor's device, with a switch</li>
+              <li>Basic SEO (titles, descriptions, Open Graph, Schema.org) and accessibility (keyboard navigation, contrast)</li>
+              <li>No frameworks, no external files: about 110 KB in total, loads instantly</li>
+            </ul>
+            <dl class="meta">
+              <dt>Stack</dt><dd>HTML, CSS, JavaScript</dd>
+              <dt>Delivery</dt><dd>3–4 working days once I have your texts, logo and photos; +1 day for a live form</dd>
+              <dt>Languages</dt><dd>English, with a Romanian version one click away (a bilingual site is one of my packages)</dd>
+            </dl>
+            <div class="links">
+              <a class="btn primary" href="site-demo/index.html" rel="noopener">Open the live demo</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2. Sheets automation -->
+      <article class="project">
+        <header>
+          <h3>Order automation in Google Sheets</h3>
+          <span class="tag">Demo · automation</span>
+        </header>
+        <div class="cols">
+          <div class="sheet" role="figure" aria-label="Mock-up of the Orders sheet filled by the automation">
+            <div class="bar">Orders <span>· Google Sheets · filled automatically from a form</span></div>
+            <div class="scroll">
+            <table>
+              <thead><tr><th>Order</th><th>Received</th><th>Customer</th><th>Product</th><th>Qty</th><th>Total</th><th>Status</th><th>Customer email</th><th>Owner alert</th></tr></thead>
+              <tbody>
+                <tr><td>CMD-0004</td><td>09 Oct 15:27</td><td>James Carter</td><td>Oak coffee table</td><td>1</td><td>640</td><td><span class="chip c-info">In progress</span></td><td><span class="tick">✔</span> sent</td><td><span class="tick">✔</span> sent</td></tr>
+                <tr><td>CMD-0005</td><td>12 Oct 08:55</td><td>Emily Watson</td><td>Ash plant stand</td><td>4</td><td>380</td><td><span class="chip c-info">In progress</span></td><td><span class="tick">✔</span> sent</td><td><span class="tick">✔</span> sent</td></tr>
+                <tr><td>CMD-0006</td><td>13 Oct 20:11</td><td>Oliver Bennett</td><td>Storage box with lid</td><td>2</td><td>420</td><td><span class="chip c-muted">Cancelled</span></td><td><span class="tick">✔</span> sent</td><td><span class="tick">✔</span> sent</td></tr>
+                <tr><td>CMD-0007</td><td>15 Oct 10:30</td><td>Charlotte Hughes</td><td>Oak cutting board</td><td>1</td><td>120</td><td><span class="chip c-ok">New</span></td><td><span class="tick">✔</span> sent</td><td><span class="tick">✔</span> sent</td></tr>
+                <tr><td>CMD-0008</td><td>16 Oct 13:48</td><td>Thomas Reed</td><td>Walnut wall shelf</td><td>2</td><td>560</td><td><span class="chip c-ok">New</span></td><td><span class="tick">✔</span> sent</td><td><span class="tick">✔</span> sent</td></tr>
+                <tr><td>CMD-0009</td><td>18 Oct 09:05</td><td>Sophie Turner</td><td>Kitchen table</td><td>1</td><td>—</td><td><span class="chip c-warn">To check</span></td><td><span class="tick">✔</span> sent</td><td><span class="tick">✔</span> sent</td></tr>
+                <tr><td>CMD-0010</td><td>19 Oct 07:42</td><td>Daniel Brooks</td><td>Set of 4 wooden plates</td><td>1</td><td>160</td><td><span class="chip c-warn">To check</span></td><td><span class="cross">✖</span> invalid address</td><td><span class="tick">✔</span> sent</td></tr>
+              </tbody>
+            </table>
+            </div>
+          </div>
+          <div>
+            <p>When a customer submits the order form, the script does the work that usually eats an evening: it checks the data, numbers the order, writes a clean row, emails the customer a confirmation and alerts the owner. Status colours and a daily digest keep nothing from slipping.</p>
+            <ul>
+              <li>Validation: email format, quantity, product in the catalogue, address present</li>
+              <li>Order number, total from the price list, confirmation email with the details</li>
+              <li>Owner notification with a direct link to the row; statuses with colours; a menu to mark orders in progress, delivered or cancelled</li>
+              <li>Daily 8:00 digest of orders still "New" after 24 hours</li>
+              <li>Nothing gets lost: an invalid email keeps the order in the sheet and tells the owner why</li>
+            </ul>
+            <dl class="meta">
+              <dt>Stack</dt><dd>Google Apps Script, Google Forms, Sheets, Gmail; runs in your own Google account</dd>
+              <dt>Delivery</dt><dd>1–2 working days, including a test run with you and a one-page guide</dd>
+              <dt>Also fits</dt><dd>Invoices, stock alerts, bookings, missing-document reminders, weekly reports</dd>
+            </dl>
+            <div class="links">
+              <a class="btn primary" href="code/sheets-automation.js" rel="noopener">View the script</a>
+              <a class="btn" href="code/orders-sample.csv" rel="noopener">Sample data (CSV)</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3. Email assistant -->
+      <article class="project">
+        <header>
+          <h3>AI email assistant that drafts replies</h3>
+          <span class="tag">Demo · AI</span>
+        </header>
+        <div class="cols">
+          <div>
+            <div class="mail">
+              <div class="head"><b>Wobbly coffee table – no reply for a week</b> <span class="chip c-bad">Complaint</span> <span class="chip c-bad">Urgent</span> <span class="muted">· English</span></div>
+              <div class="body">
+                <p class="q">"One of the legs wobbles, and the table rocks even on a flat floor. I emailed you last week about it and never heard back…"</p>
+                <pre>Hello Daniel,
+
+We're sorry about the wobbly table, and even sorrier that your first email went unanswered for a week. That is not how we want to treat anyone.
+
+A table that rocks on a flat floor is a defect, and we fix it free of charge under our 5-year warranty. We'll send someone to adjust or replace the leg; a visit like this usually happens within 5 working days of your reply.
+
+To plan it, could you send us a short video or photo of the wobble, plus a few days and times when someone will be home? We'll confirm the date the same day.</pre>
+                <div class="check">Check before sending: find the customer's first email (maybe in Spam) and reply today; confirm a fitter is free within 5 working days.</div>
+              </div>
+            </div>
+            <div class="mail">
+              <div class="head"><b>Dining table for 8 – rough price?</b> <span class="chip c-info">Price question</span> <span class="chip c-muted">Normal</span> <span class="muted">· English</span></div>
+              <div class="body">
+                <p class="q">"I'm looking for a solid oak dining table that seats 8 people, roughly 240 x 100 cm. Could you give me a rough idea of the price and how long it would take?"</p>
+                <pre>Hi Sarah,
+
+A solid oak dining table for 8 at around 240 × 100 cm usually costs between 4,500 and 7,500 lei (VAT included), depending on the exact size, the thickness of the top, the legs and the finish. The final price goes into a written quote and doesn't change afterwards.
+
+You receive a 3D design and a fixed quote within 5 working days of the measuring visit, and the table is built in 4–6 weeks from approval. Measuring visits are free in Cluj-Napoca…</pre>
+                <div class="check">Check before sending: confirm availability for the measuring visit; add travel costs if the address is outside the usual area.</div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p>The assistant reads incoming customer emails and prepares, for each one, a category, a priority and a draft reply in the customer's own language. It uses only your company's information (opening hours, price ranges, lead times, warranty) and never invents a price or a promise; what it isn't sure about goes into a "check before sending" note.</p>
+            <ul>
+              <li>Categories: price question, complaint, booking, order status, partnership, other</li>
+              <li>Priorities with the reason, so the inbox is handled in the right order</li>
+              <li>Drafts land in your Drafts folder (Gmail or Outlook); a person reads and sends</li>
+              <li>Customer emails are treated as data, never as instructions; failed emails are reported, not lost</li>
+              <li>Spending cap and a daily limit on the API; your own API key, revocable any time</li>
+            </ul>
+            <dl class="meta">
+              <dt>Stack</dt><dd>Python, Claude API (structured output); Gmail via Apps Script or Gmail API; Outlook via Power Automate or Microsoft Graph</dd>
+              <dt>Delivery</dt><dd>4–6 working days, including a trial on 20–30 of your old emails to tune the tone and the rules</dd>
+              <dt>Data</dt><dd>Processing agreement (GDPR art. 28); sensitive emails excluded from the flow</dd>
+            </dl>
+            <div class="links">
+              <a class="btn primary" href="code/email-assistant.py" rel="noopener">View the script</a>
+              <a class="btn" href="code/email-assistant-report.md" rel="noopener">Full sample report</a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <p class="kicker">How I work</p>
+      <h2>Small scope, fixed price, no surprises</h2>
+      <div class="steps">
+        <div class="step"><h3>A 20-minute call</h3><p class="muted">You show me the task that eats your time. I ask what happens today, step by step.</p></div>
+        <div class="step"><h3>Written scope</h3><p class="muted">One page: what gets built, what it needs from you, the fixed price and the delivery date.</p></div>
+        <div class="step"><h3>Built in your account</h3><p class="muted">Google Workspace or Microsoft 365, with staff-level access only. You see it run on a test before it goes live.</p></div>
+        <div class="step"><h3>Handover</h3><p class="muted">A short guide, two rounds of changes, and optional monthly care so it keeps working next year.</p></div>
+      </div>
+      <p class="note" style="margin-top:22px"><b>Two rules:</b>&nbsp;nothing is sent to your customers without a person approving it, and your data stays in your own accounts. I use AI tools, including Claude, in my work and I say so.</p>
+    </div>
+  </section>
+
+  <section id="prices">
+    <div class="wrap">
+      <p class="kicker">Prices</p>
+      <h2>Typical budgets</h2>
+      <p class="muted">Fixed price agreed before I start. Smaller tasks are available as packages on Fiverr; on Upwork I work at $25/hour or per project.</p>
+      <div class="prices">
+        <div class="price"><div class="kicker">First automation</div><div class="amt">$150 – $600</div><p class="muted">One repetitive task, done in about a week.</p><ul><li>Form → sheet → emails → statuses</li><li>Reminders, digests, reports</li><li>Test run and a one-page guide</li></ul></div>
+        <div class="price"><div class="kicker">One-page website</div><div class="amt">$300 – $900</div><p class="muted">Presentation site with a form, ready in 3–4 days.</p><ul><li>Mobile-first, fast, dark mode</li><li>Contact form, WhatsApp, basic SEO</li><li>Free hosting set-up on your domain</li></ul></div>
+        <div class="price"><div class="kicker">AI email assistant</div><div class="amt">from $400</div><p class="muted">Drafts for your inbox, tuned on your own emails.</p><ul><li>Categories, priorities, drafts in the customer's language</li><li>Gmail or Outlook integration</li><li>Monthly care from $50</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact">
+        <div>
+          <p class="kicker">Contact</p>
+          <h2>Tell me about the task that eats your time</h2>
+          <p class="muted">Leave your details and two lines about the problem. I reply within one working day, by email, with a few questions and a first idea of price and timing. Based in Romania (EET), working with clients in the UK, the EU and the US, in English and Romanian.</p>
+          <p class="small muted">Prefer a platform? <a href="https://www.upwork.com/freelancers/~01161968f253c5a07a" rel="noopener">Message me on Upwork</a> or <a href="https://www.fiverr.com/gabriel_j2026" rel="noopener">order on Fiverr</a>.</p>
+          <p class="small muted">This form is itself one of my automations: each request lands in a Google Sheet and in my inbox through a small Google Apps Script, with an automatic confirmation to you.</p>
+        </div>
+        <form id="lead-form" class="lead" novalidate>
+          <div class="two">
+            <label>Name <input name="name" type="text" required autocomplete="name" placeholder="Your name"></label>
+            <label>Email <input name="email" type="email" required autocomplete="email" placeholder="you@company.com"></label>
+          </div>
+          <div class="two">
+            <label>Phone or WhatsApp <span class="opt">(optional)</span> <input name="phone" type="tel" autocomplete="tel" placeholder="+44 …"></label>
+            <label>What do you need? <select name="need"><option value="">Choose…</option><option>An automation</option><option>A website</option><option>An AI email assistant</option><option>Not sure yet</option></select></label>
+          </div>
+          <label>Two lines about it <textarea name="message" rows="4" required placeholder="For example: every order from our form has to be typed into a spreadsheet and confirmed by email by hand."></textarea></label>
+          <div class="hp" aria-hidden="true"><label>Leave this field empty <input name="website" type="text" tabindex="-1" autocomplete="off"></label></div>
+          <label class="check"><input type="checkbox" name="consent" required> <span>You may contact me about this request. My details are used for nothing else.</span></label>
+          <button class="btn primary" type="submit">Send</button>
+          <p class="form-msg" id="lead-msg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 Gabriel. The three projects above are demos built on fictional businesses and made-up data (names, orders, emails and prices are invented). Code is shown for reading; please ask before reusing it commercially.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  // Contact form: posts to a Google Apps Script web app that writes a Google Sheet and emails me.
+  var ENDPOINT = 'https://script.google.com/macros/s/AKfycbxJ3_6cYwHQ2277tiVfpi67midcfLFz1pHv5WUA4udlzlhIwHXMdlJKuYIqZ5OzOc7E/exec';
+  var form = document.getElementById('lead-form');
+  var msg = document.getElementById('lead-msg');
+  if (!form) return;
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (form.elements.website.value) return; // honeypot: bots fill it, people never see it
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    var btn = form.querySelector('button[type="submit"]');
+    var data = {
+      name: form.elements.name.value.trim(),
+      email: form.elements.email.value.trim(),
+      phone: form.elements.phone.value.trim(),
+      need: form.elements.need.value,
+      message: form.elements.message.value.trim(),
+      page: location.href,
+      token: 'portfolio-2026'
+    };
+    if (!ENDPOINT) {
+      msg.textContent = 'The form is being connected right now. Until then, please message me on Upwork or Fiverr.';
+      return;
+    }
+    btn.disabled = true;
+    msg.textContent = 'Sending…';
+    fetch(ENDPOINT, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(data) })
+      .then(function () {
+        form.reset();
+        msg.textContent = 'Thank you, ' + data.name.split(/\s+/)[0] + '. I will reply within one working day at ' + data.email + '.';
+      })
+      .catch(function () {
+        msg.textContent = 'Something went wrong. Please message me on Upwork or Fiverr instead.';
+      })
+      .then(function () { btn.disabled = false; });
+  });
+})();
+</script>
+</body>
+</html>
