@@ -1,0 +1,66 @@
+[
+  {
+    "id": "E-001",
+    "de_la_nume": "Sarah Whitfield",
+    "de_la_email": "sarah.whitfield@mail.example",
+    "subiect": "Dining table for 8 – rough price?",
+    "primit": "2026-10-19T08:12:00+03:00",
+    "corp": "Hi,\n\nWe recently moved to Cluj and I'm looking for a solid oak dining table that seats 8 people, roughly 240 x 100 cm. Could you give me a rough idea of the price and how long it would take? We'd also like to know if someone could come and measure the room.\n\nThanks,\nSarah"
+  },
+  {
+    "id": "E-002",
+    "de_la_nume": "Mark Peterson",
+    "de_la_email": "mark.peterson@mail.example",
+    "subiect": "Oak bookcase quote",
+    "primit": "2026-10-18T16:05:00+03:00",
+    "corp": "Hello,\n\nI saw your work on the website. How much would an oak bookcase cost, 2.4 m wide and 2.6 m high, with doors at the bottom? I'm also interested in the walnut version, if the price differs a lot.\n\nThank you,\nMark Peterson"
+  },
+  {
+    "id": "E-003",
+    "de_la_nume": "Laura Collins",
+    "de_la_email": "laura.c@exemplu.example",
+    "subiect": "Complaint about order CMD-0003",
+    "primit": "2026-10-19T07:48:00+03:00",
+    "corp": "Hello,\n\nI received the set of 4 wooden plates today (order CMD-0003). One of the plates has a crack along the edge, and the delivery was 5 days later than the promised date. The set is a gift for Saturday. I want the plate replaced as soon as possible, or my money back for the set.\n\nI also wrote a week ago and have not received any reply.\n\nLaura Collins"
+  },
+  {
+    "id": "E-004",
+    "de_la_nume": "Daniel Kovacs",
+    "de_la_email": "daniel.kovacs@mail.example",
+    "subiect": "Wobbly coffee table – no reply for a week",
+    "primit": "2026-10-18T21:30:00+03:00",
+    "corp": "Hello,\n\nI ordered an oak coffee table from you in September and it was delivered last Tuesday. One of the legs wobbles, and the table rocks even on a flat floor. I emailed you last week about it and never heard back, which is frustrating.\n\nPlease tell me how you plan to fix it and when someone can come.\n\nDaniel Kovacs"
+  },
+  {
+    "id": "E-005",
+    "de_la_nume": "Peter Hughes",
+    "de_la_email": "peter.hughes@mail.example",
+    "subiect": "Booking a kitchen measuring visit",
+    "primit": "2026-10-19T09:20:00+03:00",
+    "corp": "Hello,\n\nI would like a custom-made kitchen (L-shaped, about 4.5 m) and I need to book a measuring visit. I live in Florești. I can do Thursday or Friday, after 4 pm.\n\nThank you,\nPeter Hughes\n0700 000 205"
+  },
+  {
+    "id": "E-006",
+    "de_la_nume": "Emma Clarke",
+    "de_la_email": "emma.clarke@mail.example",
+    "subiect": "Visiting your workshop on Saturday?",
+    "primit": "2026-10-17T12:40:00+03:00",
+    "corp": "Hi,\n\nWe're thinking about a wardrobe with fluted doors and would love to see samples of the wood finishes in person. Is it possible to visit your workshop this Saturday around 11? There would be two of us.\n\nBest,\nEmma"
+  },
+  {
+    "id": "E-007",
+    "de_la_nume": "James Carter",
+    "de_la_email": "james.carter@exemplu.example",
+    "subiect": "When will order CMD-0004 arrive?",
+    "primit": "2026-10-19T08:55:00+03:00",
+    "corp": "Hello,\n\nI ordered the oak coffee table (CMD-0004) on 9 October. I was given a lead time of 15 working days. Are we on schedule? I would like to know so that I can be home on the day of delivery.\n\nThank you,\nJames Carter"
+  },
+  {
+    "id": "E-008",
+    "de_la_nume": "Rebecca Foster",
+    "de_la_email": "rebecca.foster@mail.example",
+    "subiect": "Collaboration with your workshop",
+    "primit": "2026-10-16T15:10:00+03:00",
+    "corp": "Hello,\n\nI'm an interior architect in Cluj and I'm looking for a reliable workshop for custom-made furniture pieces for my clients' projects. I have 4–5 projects a year. Would you be interested in a collaboration? I could stop by the workshop to talk.\n\nBest regards,\nRebecca Foster"
+  }
+]

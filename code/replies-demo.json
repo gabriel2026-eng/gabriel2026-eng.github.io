@@ -1,0 +1,82 @@
+{
+  "E-001": {
+    "limba": "en",
+    "categorie": "Price question",
+    "prioritate": "Normal",
+    "motiv_prioritate": "New customer, clear request, no deadline; a quick reply improves the chance of winning the order.",
+    "rezumat": "Asks for an approximate price and lead time for a 240 × 100 cm oak dining table (8 people) and a measuring visit.",
+    "ciorna_subiect": "Re: Dining table for 8 – rough price?",
+    "ciorna_text": "Hi Sarah,\n\nThank you for getting in touch, and welcome to Cluj!\n\nA solid oak dining table for 8 people at around 240 × 100 cm usually costs between €900 and €1,500 (VAT included), depending on the exact size, the thickness of the top, the legs and the finish. The final price goes into a written quote and doesn't change afterwards.\n\nAs for timing: you receive a 3D design and a fixed quote within 5 working days of the measuring visit, and the table is built in 4–6 weeks from the day you approve it.\n\nMeasuring visits are free in Cluj-Napoca. If you tell us a few days and times that suit you (we usually visit Tuesday to Friday, between 10:00 and 17:00), we'll book one. You are also welcome at the workshop, where we keep samples of wood and finishes: 12 Workshop St., Monday to Friday 9:00–17:30.\n\nBest regards,\nOak & Form Woodworks team\n0700 000 000",
+    "nota_pentru_om": "Check availability for measuring on the days the customer proposes; if the address is outside the Cluj + 30 km area, add the travel cost."
+  },
+  "E-002": {
+    "limba": "en",
+    "categorie": "Price question",
+    "prioritate": "Normal",
+    "motiv_prioritate": "Clear request for a quote, no deadline.",
+    "rezumat": "Asks for the price of a 2.4 × 2.6 m oak bookcase with doors at the bottom, and the price difference compared with the walnut version.",
+    "ciorna_subiect": "Re: Oak bookcase quote",
+    "ciorna_text": "Hello,\n\nThank you for your message. An oak bookcase 2.4 m wide and 2.6 m high, with doors at the bottom, usually costs between €640 and €1,200, VAT included, depending on the number of shelves, the type of doors and the finish. The walnut version is about 20–25% more expensive.\n\nTo give you an exact price, we need to take measurements. They are free in Cluj-Napoca and up to 30 km away. After the visit, within 5 working days at most, you receive 3D renders and a firm quote, and production takes 4–6 weeks from approval.\n\nIf you tell us which town you are in and which days suit you, we will arrange the visit. A photo of the wall where the bookcase would go would also help.\n\nKind regards,\nOak & Form Woodworks team\n0700 000 000",
+    "nota_pentru_om": "The price in the draft is an indicative range taken from the company information; if you already have a more precise figure for the requested dimensions, replace it."
+  },
+  "E-003": {
+    "limba": "en",
+    "categorie": "Complaint",
+    "prioritate": "Urgent",
+    "motiv_prioritate": "Defective product, delivered late, for a gift needed by Saturday, and an earlier message went unanswered.",
+    "rezumat": "The set of wooden plates (CMD-0003) arrived with one cracked plate and 5 days late; the customer asks for a replacement or a refund by Saturday.",
+    "ciorna_subiect": "Re: Complaint about order CMD-0003",
+    "ciorna_text": "Hello,\n\nWe apologize for the situation: a cracked plate and a late delivery are exactly what we never want a customer to receive, especially for a gift. We are also sorry that the message you sent a week ago went unanswered.\n\nWe fix manufacturing defects at no cost to you. For order CMD-0003 we propose to replace the cracked plate or, if you prefer, to refund the price of the set. Please send us one or two photos of the plate so that we can start right away.\n\nWe will write to you today with a concrete delivery date for the replacement, bearing in mind that you need it by Saturday. If you prefer to talk directly, you can reach us at 0700 000 000, Monday to Friday, between 9:00 and 17:30.\n\nKind regards, and our apologies,\nOak & Form Woodworks team\n0700 000 000",
+    "nota_pentru_om": "The draft promises to send a concrete delivery date today: check stock and the courier before sending and, if you can, call the customer first. You choose between replacement and refund. Look for the customer's first message (it may have landed in Spam) and check the status of CMD-0003 in the Orders sheet."
+  },
+  "E-004": {
+    "limba": "en",
+    "categorie": "Complaint",
+    "prioritate": "Urgent",
+    "motiv_prioritate": "Stability defect on a delivered piece and a first message left unanswered for a week; risk of a negative review.",
+    "rezumat": "The oak coffee table wobbles, the customer got no reply to the first email and asks for a solution and a date for the visit.",
+    "ciorna_subiect": "Re: Wobbly coffee table – no reply for a week",
+    "ciorna_text": "Hello Daniel,\n\nWe're sorry about the wobbly table, and even sorrier that your first email went unanswered for a week. That is not how we want to treat anyone.\n\nA table that rocks on a flat floor is a defect, and we fix it free of charge under our 5-year warranty. We'll send someone to your home to adjust or replace the leg, and a visit like this usually happens within 5 working days of your reply.\n\nTo plan it, could you send us:\n1. a short video or a photo that shows the wobble;\n2. your address and a few days and times when someone will be home.\n\nAs soon as we have them, we'll confirm the date the same day.\n\nKind regards,\nOak & Form Woodworks team\n0700 000 000",
+    "nota_pentru_om": "Look for the customer's first email (it may have landed in Spam) and reply today. Confirm that a craftsman is free within 5 working days before sending. If the address is outside the usual area, decide whether the visit stays free (it is a defect)."
+  },
+  "E-005": {
+    "limba": "en",
+    "categorie": "Booking",
+    "prioritate": "Normal",
+    "motiv_prioritate": "Asks for a visit in the next few days; not an emergency, but needs a quick confirmation.",
+    "rezumat": "Wants measurements for an L-shaped kitchen (about 4.5 m), in Florești, on Thursday or Friday after 16:00.",
+    "ciorna_subiect": "Re: Booking a kitchen measuring visit",
+    "ciorna_text": "Hello,\n\nThank you for your message. Measuring is free in Cluj-Napoca and up to 30 km away, so Florești is within the area.\n\nOur visits usually end at 17:00, so we suggest Thursday, 22 October, or Friday, 23 October, at 16:00. If neither suits you, tell us which other days you have free and we'll find a slot.\n\nTo prepare the visit, please send us the exact address and, if you have one, a plan or sketch of the kitchen, plus the list of appliances you want to integrate. After the measuring, within 5 working days at most, you receive 3D renders and a firm quote.\n\nKind regards,\nOak & Form Woodworks team\n0700 000 000",
+    "nota_pentru_om": "Check the calendar for 22 and 23 October at 16:00; if you have no free slot, change the dates in the draft. The customer's phone number is in the email signature (0700 000 205)."
+  },
+  "E-006": {
+    "limba": "en",
+    "categorie": "Booking",
+    "prioritate": "Normal",
+    "motiv_prioritate": "Asks for a workshop visit this Saturday; needs confirmation before the weekend.",
+    "rezumat": "Wants to come on Saturday around 11:00, two people, to see finish samples for a wardrobe with fluted doors.",
+    "ciorna_subiect": "Re: Visiting your workshop on Saturday?",
+    "ciorna_text": "Hi Emma,\n\nThank you for your message, we'd be glad to see you at the workshop. We're open on Saturdays from 10:00 to 14:00 by appointment, so 11:00 this Saturday (24 October) works in principle. We'll have the table with samples of wood and finishes ready, including walnut and fluted doors like the ones you describe.\n\nCould you confirm by reply that you'll come at 11:00 and that there will be two of you? You'll find us at 12 Workshop St., Cluj-Napoca. If you can send a photo of the wall where the wardrobe would go, we can also talk about sizes during the visit.\n\nBest regards,\nOak & Form Woodworks team\n0700 000 000",
+    "nota_pentru_om": "Confirm in the calendar that someone will be at the workshop on Saturday, 24 October, at 11:00, and that the fluted door samples are at hand."
+  },
+  "E-007": {
+    "limba": "en",
+    "categorie": "Order status",
+    "prioritate": "Normal",
+    "motiv_prioritate": "Simple question, no dissatisfaction; the reply depends on the actual state of the order.",
+    "rezumat": "Asks whether the oak coffee table (CMD-0004, ordered on 9 October, lead time of 15 working days) will arrive on time.",
+    "ciorna_subiect": "Re: When will order CMD-0004 arrive?",
+    "ciorna_text": "Hello,\n\nThank you for your message. We are checking the progress of order CMD-0004 in the workshop right now and will write to you today with an estimated delivery date, so that you can be home on that day.\n\nIf you need anything in the meantime, you can reach us at 0700 000 000, Monday to Friday, between 9:00 and 17:30.\n\nKind regards,\nOak & Form Woodworks team\n0700 000 000",
+    "nota_pentru_om": "Check the status of CMD-0004 in the Orders sheet before sending; if you already have the date, put it directly in the email instead of promising a second message."
+  },
+  "E-008": {
+    "limba": "en",
+    "categorie": "Partnership or other",
+    "prioritate": "Normal",
+    "motiv_prioritate": "Long-term business opportunity, not urgent.",
+    "rezumat": "An interior architect from Cluj proposes a collaboration on 4–5 projects a year and a visit to the workshop.",
+    "ciorna_subiect": "Re: Collaboration with your workshop",
+    "ciorna_text": "Hello,\n\nThank you for your message and for your interest in our workshop. We work with architects and interior designers, and a collaboration on 4–5 projects a year would interest us.\n\nWe suggest a meeting at the workshop, where we can show you how we work, the wood and finish samples and a few pieces in progress, and discuss the terms of the collaboration. The workshop is open Monday to Friday, between 9:00 and 17:30; please tell us which day and time suit you.\n\nKind regards,\nOak & Form Woodworks team\n0700 000 000",
+    "nota_pentru_om": "The draft promises nothing concrete about the terms (commission, deadlines): you set them at the meeting. You can ask for their portfolio before the visit."
+  }
+}

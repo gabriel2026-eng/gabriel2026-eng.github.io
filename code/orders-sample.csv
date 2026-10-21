@@ -1,0 +1,11 @@
+﻿Order no.,Date received,Customer name,Email,Phone,Product,Quantity,Total (lei),Delivery address,Notes,Status,Customer confirmation,Owner notification
+CMD-0001,2026-10-05 09:14,Hannah Mitchell,hannah.mitchell@exemplu.example,0700 000 101,Oak cutting board,2,240,"4 Example St., Cluj-Napoca","Gift, please gift-wrap",Delivered,✔ 05.10.2026 09:14,✔ 05.10.2026 09:14
+CMD-0002,2026-10-06 18:40,Michael Evans,michael.e@exemplu.example,0700 000 102,Walnut wall shelf,1,280,"12 Lalelelor St., Bucharest",,Delivered,✔ 06.10.2026 18:40,✔ 06.10.2026 18:40
+CMD-0003,2026-10-08 11:02,Laura Collins,laura.c@exemplu.example,0700 000 103,Set of 4 wooden plates,3,480,"7 Castanilor St., Iași",Delivery after 5 pm,Delivered,✔ 08.10.2026 11:02,✔ 08.10.2026 11:02
+CMD-0004,2026-10-09 15:27,James Carter,james.carter@exemplu.example,0700 000 104,Oak coffee table,1,640,"21 Pădurii St., Brașov",,In progress,✔ 09.10.2026 15:27,✔ 09.10.2026 15:27
+CMD-0005,2026-10-12 08:55,Emily Watson,emily.w@exemplu.example,0700 000 105,Ash plant stand,4,380,"3 Teilor Blvd., Timișoara","No wrapping, thank you",In progress,✔ 12.10.2026 08:55,✔ 12.10.2026 08:55
+CMD-0006,2026-10-13 20:11,Oliver Bennett,oliver.b@exemplu.example,0700 000 106,Storage box with lid,2,420,"9 Morii St., Sibiu",Customer withdrew (found it elsewhere),Cancelled,✔ 13.10.2026 20:11,✔ 13.10.2026 20:11
+CMD-0007,2026-10-15 10:30,Charlotte Hughes,charlotte.h@exemplu.example,0700 000 107,Oak cutting board,1,120,"15 Florilor St., Oradea",Engraving “Alina” on the corner,New,✔ 15.10.2026 10:30,✔ 15.10.2026 10:30
+CMD-0008,2026-10-16 13:48,Thomas Reed,thomas.r@exemplu.example,0700 000 108,Walnut wall shelf,2,560,"30 Mării St., Constanța",,New,✔ 16.10.2026 13:48,✔ 16.10.2026 13:48
+CMD-0009,2026-10-18 09:05,Sophie Turner,sophie.t@exemplu.example,0700 000 109,Kitchen table,1,,"2 Viilor St., Ploiești","I would like 120 × 80 cm, made of oak",To check,✔ 18.10.2026 09:05,✔ 18.10.2026 09:05
+CMD-0010,2026-10-19 07:42,Daniel Brooks,daniel.brooks(at)exemplu,0700 000 110,Set of 4 wooden plates,1,160,"5 Cetății St., Cluj-Napoca",,To check,✖ not sent: email missing or invalid,✔ 19.10.2026 07:42
